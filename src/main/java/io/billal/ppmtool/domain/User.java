@@ -35,7 +35,6 @@ public class User implements UserDetails {
     private String confirmPassword;
 
     @Transient
-    @JsonIgnore
     private String validationKey;
 
     private Date created_At;
