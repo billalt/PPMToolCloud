@@ -55,7 +55,7 @@ public class ProjectService {
             if(project.getId() != null){
                 project.setBacklog(backlogRepository.findByProjectIdentifier(project.getProjectIdentifier().toUpperCase()));
             }
-            log.info("Billal project = {}" ,project);
+            log.info("BillalTaha ProjectName = {}   getDescription = {}" ,project.getProjectName(),project.getDescription());
             return projectRepository.save(project);
         }catch (Exception e){
             throw new ProjectIdException("Project ID '" + project.getProjectIdentifier().toUpperCase() + "' already exists");
