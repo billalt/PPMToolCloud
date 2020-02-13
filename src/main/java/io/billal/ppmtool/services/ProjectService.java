@@ -1,6 +1,8 @@
 package io.billal.ppmtool.services;
 
 
+import com.sun.org.slf4j.internal.Logger;
+import com.sun.org.slf4j.internal.LoggerFactory;
 import io.billal.ppmtool.domain.Backlog;
 import io.billal.ppmtool.domain.Project;
 import io.billal.ppmtool.domain.User;
@@ -16,6 +18,8 @@ import java.security.Principal;
 
 @Service
 public class ProjectService {
+
+    Logger logger = LoggerFactory.getLogger(ProjectService.class);
 
     @Autowired
     private ProjectRepository projectRepository;
@@ -53,6 +57,7 @@ public class ProjectService {
             if(project.getId() != null){
                 project.setBacklog(backlogRepository.findByProjectIdentifier(project.getProjectIdentifier().toUpperCase()));
             }
+            logger.debug("Billal input project = {}" , project);
             return projectRepository.save(project);
         }catch (Exception e){
             throw new ProjectIdException("Project ID '" + project.getProjectIdentifier().toUpperCase() + "' already exists");

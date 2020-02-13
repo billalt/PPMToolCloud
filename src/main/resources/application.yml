@@ -13,7 +13,7 @@ spring:
       naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
     properties:
       hibernate:
-        #dialect: org.hibernate.dialect.MySQL5Dialect
+        dialect: org.hibernate.dialect.MySQL5Dialect
         connection:
           characterEncoding: UTF-8
           CharSet: UTF-8
