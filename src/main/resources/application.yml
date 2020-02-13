@@ -10,8 +10,7 @@ spring:
 #        dialect:org.hibernate.dialect.MySQL57Dialect
     hibernate:
       ddl-auto: update
-      naming:
-        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
     properties:
       hibernate:
         #dialect: org.hibernate.dialect.MySQL5Dialect
