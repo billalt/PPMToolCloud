@@ -75,6 +75,8 @@ public class ProjectService {
             throw new ProjectNotFoundException("Project '" + projectId.toUpperCase() + "' not found in your account");
         }
 
+        log.info("BillalTaha2 ProjectName = {}   getDescription = {}" ,project.getProjectName(),project.getDescription());
+
         return project;
     }
 
