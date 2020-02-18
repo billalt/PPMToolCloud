@@ -10,6 +10,7 @@ import java.util.List;
 public class Backlog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(columnDefinition = "serial")
     private Long id;
     private Integer PTSequence = 0;
     private String projectIdentifier;

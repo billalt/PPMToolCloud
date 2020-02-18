@@ -13,6 +13,7 @@ public class Project {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(columnDefinition = "serial")
     private Long id;
     @NotBlank(message = "Project name is required")
     private String projectName;
