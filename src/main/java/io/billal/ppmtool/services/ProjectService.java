@@ -3,7 +3,7 @@ package io.billal.ppmtool.services;
 
 import io.billal.ppmtool.domain.Backlog;
 import io.billal.ppmtool.domain.Project;
-import io.billal.ppmtool.domain.User;
+import io.billal.ppmtool.domain.Users;
 import io.billal.ppmtool.exceptions.ProjectIdException;
 import io.billal.ppmtool.exceptions.ProjectNotFoundException;
 import io.billal.ppmtool.repositories.BacklogRepository;
@@ -40,7 +40,7 @@ public class ProjectService {
         }
 
         try{
-            User user = userRepository.findByUsername(username);
+            Users user = userRepository.findByUsername(username);
             project.setUser(user);
             project.setProjectLeader(user.getUsername());
             project.setProjectIdentifier(project.getProjectIdentifier().toUpperCase());

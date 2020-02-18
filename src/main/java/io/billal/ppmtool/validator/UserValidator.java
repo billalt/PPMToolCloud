@@ -1,6 +1,6 @@
 package io.billal.ppmtool.validator;
 
-import io.billal.ppmtool.domain.User;
+import io.billal.ppmtool.domain.Users;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
@@ -10,13 +10,13 @@ public class UserValidator implements Validator {
 
     @Override
     public boolean supports(Class<?> aClass) {
-        return User.class.equals(aClass);
+        return Users.class.equals(aClass);
     }
 
     @Override
     public void validate(Object object, Errors errors) {
 
-        User user = (User) object;
+        Users user = (Users) object;
 
         if(user.getPassword() == null){
             user.setPassword("");

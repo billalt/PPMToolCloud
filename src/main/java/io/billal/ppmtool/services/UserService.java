@@ -1,6 +1,6 @@
 package io.billal.ppmtool.services;
 
-import io.billal.ppmtool.domain.User;
+import io.billal.ppmtool.domain.Users;
 import io.billal.ppmtool.exceptions.UsernameExistException;
 import io.billal.ppmtool.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,13 +16,13 @@ public class UserService {
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    public User saveUser(User newUser){
+    public Users saveUser(Users newUser){
 
 
         try{
             newUser.setPassword(bCryptPasswordEncoder.encode(newUser.getPassword()));
             //Username has to be unique (exception)
-            User user = userRepository.findByUsername(newUser.getUsername());
+            Users user = userRepository.findByUsername(newUser.getUsername());
             if(user != null){
                 throw new UsernameExistException("Username '"+newUser.getUsername()+"' already exists");
             }

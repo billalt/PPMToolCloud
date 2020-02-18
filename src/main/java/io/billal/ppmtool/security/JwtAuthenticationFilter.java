@@ -1,7 +1,7 @@
 package io.billal.ppmtool.security;
 
 
-import io.billal.ppmtool.domain.User;
+import io.billal.ppmtool.domain.Users;
 import io.billal.ppmtool.services.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -40,7 +40,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
             if(StringUtils.hasText(jwt) && jwtTokenProvider.validateToken(jwt)){
                 Long userId = jwtTokenProvider.getUserIdFromJWT(jwt);
-                User userDetails = customUserDetailsService.loadUserById(userId);
+                Users userDetails = customUserDetailsService.loadUserById(userId);
 
                 UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
                         userDetails , null , Collections.emptyList()

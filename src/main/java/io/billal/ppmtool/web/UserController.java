@@ -1,7 +1,7 @@
 package io.billal.ppmtool.web;
 
 
-import io.billal.ppmtool.domain.User;
+import io.billal.ppmtool.domain.Users;
 import io.billal.ppmtool.payload.JWTLoginSuccessResponse;
 import io.billal.ppmtool.payload.LoginRequest;
 import io.billal.ppmtool.security.JwtTokenProvider;
@@ -62,15 +62,15 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<?> registerUser(@Valid @RequestBody User user, BindingResult result){
+    public ResponseEntity<?> registerUser(@Valid @RequestBody Users user, BindingResult result){
         //Validate Passwords match
         userValidator.validate(user,result);
 
         ResponseEntity<?> errorMap = errorService.mapValidationService(result);
         if(errorMap != null) return errorMap;
 
-        User newUser = userService.saveUser(user);
+        Users newUser = userService.saveUser(user);
 
-        return new ResponseEntity<User>(newUser , HttpStatus.CREATED);
+        return new ResponseEntity<Users>(newUser , HttpStatus.CREATED);
     }
 }

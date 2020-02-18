@@ -1,6 +1,6 @@
 package io.billal.ppmtool.security;
 
-import io.billal.ppmtool.domain.User;
+import io.billal.ppmtool.domain.Users;
 import io.jsonwebtoken.*;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
@@ -17,7 +17,7 @@ public class JwtTokenProvider {
 
     //Generate the token
     public String generateToken(Authentication authentication){
-        User user = (User) authentication.getPrincipal();
+        Users user = (Users) authentication.getPrincipal();
 
         Date now = new Date(System.currentTimeMillis()) ;
         Date expirationDate = new Date(now.getTime() + EXPIRATION_TIME);

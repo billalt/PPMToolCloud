@@ -14,7 +14,7 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-public class User implements UserDetails {
+public class Users implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,7 +44,7 @@ public class User implements UserDetails {
     @OneToMany(cascade = CascadeType.REFRESH , fetch = FetchType.EAGER , mappedBy = "user" , orphanRemoval = true)
     private List<Project> projects = new ArrayList<>();
 
-    public User() {
+    public Users() {
     }
 
     public Long getId() {
