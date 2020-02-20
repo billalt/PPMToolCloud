@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/static/css/main.fe2aaac5.chunk.css",
-    "main.js": "/static/js/main.98eb6474.chunk.js",
-    "main.js.map": "/static/js/main.98eb6474.chunk.js.map",
+    "main.js": "/static/js/main.00b56254.chunk.js",
+    "main.js.map": "/static/js/main.00b56254.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.df9c3e05.js",
     "runtime-main.js.map": "/static/js/runtime-main.df9c3e05.js.map",
     "static/css/2.17e5ed98.chunk.css": "/static/css/2.17e5ed98.chunk.css",
-    "static/js/2.2b111ca5.chunk.js": "/static/js/2.2b111ca5.chunk.js",
-    "static/js/2.2b111ca5.chunk.js.map": "/static/js/2.2b111ca5.chunk.js.map",
+    "static/js/2.0592607a.chunk.js": "/static/js/2.0592607a.chunk.js",
+    "static/js/2.0592607a.chunk.js.map": "/static/js/2.0592607a.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.50d9c26b398b7fe37caf6c4baecd3023.js": "/precache-manifest.50d9c26b398b7fe37caf6c4baecd3023.js",
+    "precache-manifest.db65588b86e688e88f245459414ec135.js": "/precache-manifest.db65588b86e688e88f245459414ec135.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.17e5ed98.chunk.css.map": "/static/css/2.17e5ed98.chunk.css.map",
     "static/css/main.fe2aaac5.chunk.css.map": "/static/css/main.fe2aaac5.chunk.css.map",
-    "static/js/2.2b111ca5.chunk.js.LICENSE": "/static/js/2.2b111ca5.chunk.js.LICENSE",
+    "static/js/2.0592607a.chunk.js.LICENSE": "/static/js/2.0592607a.chunk.js.LICENSE",
     "static/media/alwazLogo1.png": "/static/media/alwazLogo1.53d9654d.png"
   },
   "entrypoints": [
     "static/js/runtime-main.df9c3e05.js",
     "static/css/2.17e5ed98.chunk.css",
-    "static/js/2.2b111ca5.chunk.js",
+    "static/js/2.0592607a.chunk.js",
     "static/css/main.fe2aaac5.chunk.css",
-    "static/js/main.98eb6474.chunk.js"
+    "static/js/main.00b56254.chunk.js"
   ]
 }
